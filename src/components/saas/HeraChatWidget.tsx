@@ -7,12 +7,13 @@ const EMBED_URL = "https://www.107studio.es/embed/hera?inline"
 export function HeraChatWidget() {
   const [open, setOpen] = useState(false)
   const [loaded, setLoaded] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   const handleLoad = useCallback(() => setLoaded(true), [])
 
   const handleToggle = useCallback(() => {
     setOpen((prev) => {
-      if (prev) setLoaded(false)
+      if (!prev) setMounted(true)
       return !prev
     })
   }, [])
@@ -33,17 +34,25 @@ export function HeraChatWidget() {
                 <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
               </div>
             )}
-            <iframe
-              src={EMBED_URL}
-              title="Hera — Demo en vivo"
-              className="h-full w-full border-0"
-              style={{ opacity: loaded ? 1 : 0, position: loaded ? "relative" : "absolute" }}
-              allow="clipboard-write"
-              onLoad={handleLoad}
-            />
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Iframe stays mounted once opened — preserves conversation */}
+      {mounted && (
+        <iframe
+          src={EMBED_URL}
+          title="Hera — Demo en vivo"
+          className="fixed bottom-[6.5rem] right-6 w-[380px] h-[540px] rounded-2xl border-0 md:w-[400px] md:h-[580px]"
+          style={{
+            opacity: open && loaded ? 1 : 0,
+            pointerEvents: open ? "auto" : "none",
+            zIndex: 51,
+          }}
+          allow="clipboard-write"
+          onLoad={handleLoad}
+        />
+      )}
 
       <motion.button
         onClick={handleToggle}
