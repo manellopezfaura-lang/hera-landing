@@ -12,6 +12,7 @@ import { FAQSection } from "./FAQSection"
 import { CTASection } from "./CTASection"
 import { Footer } from "./Footer"
 import { ScrollToTop } from "./ScrollToTop"
+import { HeraChatWidget } from "./HeraChatWidget"
 
 export function SaasLanding() {
   return (
@@ -36,6 +37,7 @@ export function SaasLanding() {
       <CTASection />
       <Footer />
       <ScrollToTop />
+      <HeraChatWidget />
     </div>
     </LanguageProvider>
   )
