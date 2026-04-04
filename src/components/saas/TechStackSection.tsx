@@ -37,7 +37,7 @@ const integrations: Integration[] = [
 
 function IntegrationCard({ item, index }: { item: Integration; index: number }) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
     <motion.div

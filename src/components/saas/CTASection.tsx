@@ -10,7 +10,7 @@ const perkKeys = ["contact.perk1", "contact.perk2"] as const
 
 export function CTASection() {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref, { once: true, margin: "-50px" })
   const { t } = useTranslation()
 
   return (

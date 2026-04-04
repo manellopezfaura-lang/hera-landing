@@ -3,6 +3,7 @@ import { SaasNavbar } from "./SaasNavbar"
 import { SaasHero } from "./SaasHero"
 import { TrustBar } from "./TrustBar"
 import { ServicesSection } from "./ServicesSection"
+import { AnimatedShowcase } from "./animated-showcase"
 import { HowItWorksSection } from "./HowItWorksSection"
 import { TechStackSection } from "./TechStackSection"
 import { TestimonialsSection } from "./TestimonialsSection"
@@ -27,6 +28,7 @@ export function SaasLanding() {
       <ServicesSection />
       <TrustBar />
       <HowItWorksSection />
+      <AnimatedShowcase />
       <TechStackSection />
       <TestimonialsSection />
 

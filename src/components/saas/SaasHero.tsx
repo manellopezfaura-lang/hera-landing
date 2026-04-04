@@ -27,8 +27,12 @@ export function SaasHero() {
       <div className="relative z-10 flex flex-col items-center w-full pt-14 md:pt-24">
         {/* Badge */}
         <motion.div {...fadeUp(0, 10, 0.5)} className="mb-5 md:mb-6">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-[11px] text-muted-foreground font-body">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-[11px] text-muted-foreground font-body">
             {t("hero.badge")}
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="absolute inset-0 animate-ping rounded-full bg-green-500/60" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-500" />
+            </span>
           </span>
         </motion.div>
 

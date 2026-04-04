@@ -22,7 +22,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: {
   onToggle: () => void
 }) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref, { once: true, margin: "-50px" })
   const { t } = useTranslation()
 
   return (

@@ -36,7 +36,7 @@ const steps = [
 
 function StepNode({ step, index, total }: { step: typeof steps[number]; index: number; total: number }) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref, { once: true, margin: "-50px" })
   const { t } = useTranslation()
 
   return (

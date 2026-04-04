@@ -16,7 +16,7 @@ const logos = [
 
 export function TrustBar() {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
     <section ref={ref} className="py-6 md:py-8 overflow-hidden">
