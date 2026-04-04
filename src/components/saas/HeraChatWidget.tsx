@@ -2,7 +2,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { MessageCircle, X } from "lucide-react"
 
-const EMBED_URL = "https://www.107studio.es/embed/hera"
+const EMBED_URL = "https://www.107studio.es/embed/hera?inline"
 
 export function HeraChatWidget() {
   const [open, setOpen] = useState(false)
