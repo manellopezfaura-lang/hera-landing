@@ -4,14 +4,14 @@ import { useRef } from "react"
 const ease = [0.25, 0.46, 0.45, 0.94] as const
 
 const logos = [
-  "Acme Corp",
-  "Globex",
-  "Initech",
-  "Umbrella",
-  "Stark Ind.",
-  "Wayne Ent.",
-  "Hooli",
-  "Pied Piper",
+  "WRS Radioserveis",
+  "The Lot",
+  "086 Studio",
+  "107 Studio",
+  "Grafco Enterprise",
+  "Rica Design",
+  "Agencia Qrea",
+  "Sanahuja Miranda Abogados",
 ]
 
 export function TrustBar() {

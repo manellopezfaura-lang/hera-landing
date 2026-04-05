@@ -7,20 +7,20 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const
 
 const testimonials = [
   {
-    initials: "SM",
-    name: "Sara M.",
+    initials: "MR",
+    name: "Marta Ríos",
     roleKey: "testimonials.1.role" as TranslationKey,
     quoteKey: "testimonials.1.quote" as TranslationKey,
   },
   {
-    initials: "DK",
-    name: "David K.",
+    initials: "JS",
+    name: "Jordi Sanahuja",
     roleKey: "testimonials.2.role" as TranslationKey,
     quoteKey: "testimonials.2.quote" as TranslationKey,
   },
   {
-    initials: "LP",
-    name: "Laura P.",
+    initials: "AG",
+    name: "Andrea Grafton",
     roleKey: "testimonials.3.role" as TranslationKey,
     quoteKey: "testimonials.3.quote" as TranslationKey,
   },
