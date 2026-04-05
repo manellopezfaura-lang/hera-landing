@@ -12,6 +12,7 @@ function generateSessionId(): string {
 export function HeraChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [hasInteracted, setHasInteracted] = useState(false)
+  const [theme, setTheme] = useState<"dark" | "light">("light")
   const [input, setInput] = useState("")
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -92,7 +93,7 @@ export function HeraChatWidget() {
     <>
       {/* Chat panel */}
       <div
-        className={`hera-panel ${isOpen ? "hera-panel--open" : ""} ${hasInteracted && !isOpen ? "hera-panel--closed" : ""}`}
+        className={`hera-panel ${isOpen ? "hera-panel--open" : ""} ${hasInteracted && !isOpen ? "hera-panel--closed" : ""} ${theme === "light" ? "hera-light" : ""}`}
         role="dialog"
         aria-label="Chat con Hera"
         aria-hidden={!isOpen}
@@ -106,6 +107,23 @@ export function HeraChatWidget() {
               <div className="hera-header__status">Online</div>
             </div>
           </div>
+          <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+          <button
+            className="hera-header__close"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+          >
+            {theme === "dark" ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5"/>
+                <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            )}
+          </button>
           <button
             className="hera-header__close"
             onClick={handleToggle}
@@ -120,6 +138,7 @@ export function HeraChatWidget() {
               />
             </svg>
           </button>
+          </div>
         </div>
 
         {/* Messages */}
