@@ -471,13 +471,17 @@ export function DashboardPreview() {
   useEffect(() => {
     if (!inView) return
     const timer = setTimeout(() => {
+      // Fire first notification immediately
+      const key0 = NOTIF_KEYS[notifIndex.current % NOTIF_KEYS.length]
+      setNotification(t(key0))
+      notifIndex.current++
       const interval = setInterval(() => {
         const key = NOTIF_KEYS[notifIndex.current % NOTIF_KEYS.length]
         setNotification(t(key))
         notifIndex.current++
-      }, 6000)
+      }, 4500)
       return () => clearInterval(interval)
-    }, 2000)
+    }, 3500)
     return () => clearTimeout(timer)
   }, [inView, t])
 

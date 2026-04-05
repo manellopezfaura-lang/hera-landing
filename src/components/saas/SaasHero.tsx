@@ -24,7 +24,7 @@ export function SaasHero() {
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_015952_e1deeb12-8fb7-4071-a42a-60779fc64ab6.mp4"
       />
 
-      <div className="relative z-10 flex flex-col items-center w-full pt-14 md:pt-24">
+      <div className="relative z-10 flex flex-col items-center w-full pt-20 md:pt-24">
         {/* Badge */}
         <motion.div {...fadeUp(0, 10, 0.5)} className="mb-5 md:mb-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-[11px] text-muted-foreground font-body">
