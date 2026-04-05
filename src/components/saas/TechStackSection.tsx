@@ -35,12 +35,9 @@ const integrations: Integration[] = [
   { name: "Custom API", Logo: CustomAPILogo, brandColor: "hsl(239 84% 67%)" },
 ]
 
-function IntegrationCard({ item, index, inView }: { item: Integration; index: number; inView: boolean }) {
+function IntegrationCard({ item }: { item: Integration }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
-      transition={{ duration: 0.35, delay: index * 0.04, ease }}
+    <div
       className="group flex flex-col items-center gap-2.5 rounded-xl border border-border bg-background p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:[border-color:color-mix(in_srgb,var(--brand)_40%,transparent)]"
       style={{ "--brand": item.brandColor } as React.CSSProperties}
     >
@@ -52,19 +49,6 @@ function IntegrationCard({ item, index, inView }: { item: Integration; index: nu
       <span className="text-[11px] font-medium text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
         {item.name}
       </span>
-    </motion.div>
-  )
-}
-
-function GridWithInView() {
-  const gridRef = useRef<HTMLDivElement>(null)
-  const gridInView = useInView(gridRef, { once: true, margin: "-30px" })
-
-  return (
-    <div ref={gridRef} className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
-      {integrations.map((item, i) => (
-        <IntegrationCard key={item.name} item={item} index={i} inView={gridInView} />
-      ))}
     </div>
   )
 }
@@ -101,7 +85,11 @@ export function TechStackSection() {
         </motion.div>
 
         {/* Grid */}
-        <GridWithInView />
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+          {integrations.map((item) => (
+            <IntegrationCard key={item.name} item={item} />
+          ))}
+        </div>
       </div>
     </section>
   )
