@@ -63,6 +63,7 @@ export function SaasHero() {
             variant="ghost"
             size="icon"
             className="h-10 w-10 rounded-full border-0 bg-background shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:bg-background/80"
+            onClick={() => window.dispatchEvent(new CustomEvent("hera:open"))}
           >
             <Play className="h-4 w-4 fill-foreground" />
           </Button>

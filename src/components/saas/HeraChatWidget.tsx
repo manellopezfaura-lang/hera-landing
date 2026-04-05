@@ -77,19 +77,17 @@ export function HeraChatWidget() {
     if (nudgeRef.current) {
       nudgeRef.current.style.opacity = "0"
       nudgeRef.current.style.transform = "translateY(4px)"
-      nudgeRef.current.style.transition = "opacity 0.3s ease, transform 0.3s ease"
-      setTimeout(() => setShowNudge(false), 300)
+      nudgeRef.current.style.transition = "opacity 0.5s ease, transform 0.5s ease"
+      setTimeout(() => setShowNudge(false), 500)
     } else {
       setShowNudge(false)
     }
-    localStorage.setItem("hera-nudge-seen", "1")
   }, [])
 
-  // Nudge — show once after 3s, auto-dismiss after 8s, hide on scroll
+  // Nudge — show after 3s every visit, auto-dismiss after 8s
   useEffect(() => {
-    const seen = localStorage.getItem("hera-nudge-seen")
-    if (seen) return
     const showTimer = setTimeout(() => {
+      nudgeDismissed.current = false
       setShowNudge(true)
     }, 3000)
     return () => clearTimeout(showTimer)
@@ -112,12 +110,23 @@ export function HeraChatWidget() {
     }
   }, [showNudge, dismissNudge])
 
-  const handleToggle = () => {
-    const next = !isOpen
-    setIsOpen(next)
-    if (!hasInteracted) setHasInteracted(true)
+  const handleToggle = useCallback(() => {
+    setIsOpen((prev) => {
+      const next = !prev
+      if (!hasInteracted) setHasInteracted(true)
+      return next
+    })
     if (showNudge) dismissNudge()
-  }
+  }, [hasInteracted, showNudge, dismissNudge])
+
+  // Listen for external "open Hera" requests (e.g. hero demo button)
+  useEffect(() => {
+    const onOpen = () => {
+      if (!isOpen) handleToggle()
+    }
+    window.addEventListener("hera:open", onOpen)
+    return () => window.removeEventListener("hera:open", onOpen)
+  }, [isOpen, handleToggle])
 
   const handleSend = () => {
     const trimmed = input.trim()
