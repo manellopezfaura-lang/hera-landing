@@ -663,6 +663,77 @@
   border-color: rgba(0, 0, 0, 0.15);
 }
 
+/* ── Nudge tooltip ── */
+.hera-nudge {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+  animation: hera-nudge-in 0.4s cubic-bezier(0.23, 0.65, 0.74, 1.09) both;
+}
+
+.hera-nudge__text {
+  background: rgba(10, 10, 14, 0.9);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--hera-font);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px -8px rgba(0, 0, 0, 0.4),
+    inset 0 0.5px 0 0 rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.hera-nudge__sparkle {
+  color: #818cf8;
+  filter: drop-shadow(0 0 6px rgba(129, 140, 248, 0.4));
+  animation: hera-breathe-icon 3.5s ease-in-out infinite;
+}
+
+.hera-nudge__arrow {
+  width: 10px;
+  height: 10px;
+  background: rgba(10, 10, 14, 0.9);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transform: rotate(45deg);
+  margin-top: -6px;
+  margin-right: 18px;
+}
+
+@keyframes hera-nudge-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .hera-nudge {
+    bottom: 76px;
+    right: 16px;
+  }
+
+  .hera-nudge__text {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
 /* ── Body scroll lock ── */
 body.hera-body-lock {
   overflow: hidden !important;

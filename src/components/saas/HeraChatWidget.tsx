@@ -13,6 +13,7 @@ export function HeraChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
   const [hasInteracted, setHasInteracted] = useState(false)
   const [theme, setTheme] = useState<"dark" | "light">("light")
+  const [showNudge, setShowNudge] = useState(false)
   const [input, setInput] = useState("")
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
@@ -67,10 +68,55 @@ export function HeraChatWidget() {
     }
   }, [isOpen])
 
+  const nudgeRef = useRef<HTMLDivElement>(null)
+  const nudgeDismissed = useRef(false)
+
+  const dismissNudge = useCallback(() => {
+    if (nudgeDismissed.current) return
+    nudgeDismissed.current = true
+    if (nudgeRef.current) {
+      nudgeRef.current.style.opacity = "0"
+      nudgeRef.current.style.transform = "translateY(4px)"
+      nudgeRef.current.style.transition = "opacity 0.3s ease, transform 0.3s ease"
+      setTimeout(() => setShowNudge(false), 300)
+    } else {
+      setShowNudge(false)
+    }
+    localStorage.setItem("hera-nudge-seen", "1")
+  }, [])
+
+  // Nudge — show once after 3s, auto-dismiss after 8s, hide on scroll
+  useEffect(() => {
+    const seen = localStorage.getItem("hera-nudge-seen")
+    if (seen) return
+    const showTimer = setTimeout(() => {
+      setShowNudge(true)
+    }, 3000)
+    return () => clearTimeout(showTimer)
+  }, [])
+
+  useEffect(() => {
+    if (!showNudge) return
+    const hideTimer = setTimeout(() => dismissNudge(), 8000)
+    // Delay scroll listeners so page-load animations don't trigger dismiss
+    const onUserScroll = () => dismissNudge()
+    const attachTimer = setTimeout(() => {
+      window.addEventListener("wheel", onUserScroll, { passive: true, once: true })
+      window.addEventListener("touchmove", onUserScroll, { passive: true, once: true })
+    }, 1000)
+    return () => {
+      clearTimeout(hideTimer)
+      clearTimeout(attachTimer)
+      window.removeEventListener("wheel", onUserScroll)
+      window.removeEventListener("touchmove", onUserScroll)
+    }
+  }, [showNudge, dismissNudge])
+
   const handleToggle = () => {
     const next = !isOpen
     setIsOpen(next)
     if (!hasInteracted) setHasInteracted(true)
+    if (showNudge) dismissNudge()
   }
 
   const handleSend = () => {
@@ -240,6 +286,14 @@ export function HeraChatWidget() {
           </button>
         </div>
       </div>
+
+      {/* Nudge tooltip */}
+      {showNudge && !isOpen && (
+        <div ref={nudgeRef} className="hera-nudge" onClick={dismissNudge}>
+          <span className="hera-nudge__text">Prueba Hera en vivo <span className="hera-nudge__sparkle">✦</span></span>
+          <span className="hera-nudge__arrow" />
+        </div>
+      )}
 
       {/* Floating trigger */}
       <button
