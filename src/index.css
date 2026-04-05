@@ -20,7 +20,7 @@
 
 @theme {
   --font-body: "Inter", sans-serif;
-  --font-display: "Instrument Serif", serif;
+  --font-display: "Playfair Display", serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
