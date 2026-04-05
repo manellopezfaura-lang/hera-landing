@@ -38,7 +38,7 @@ const integrations: Integration[] = [
 function IntegrationCard({ item }: { item: Integration }) {
   return (
     <div
-      className="group flex flex-col items-center gap-2.5 rounded-xl border border-border bg-background p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:[border-color:color-mix(in_srgb,var(--brand)_40%,transparent)]"
+      className="group flex flex-col items-center gap-2.5 rounded-xl border border-border bg-background p-5 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:[border-color:color-mix(in_srgb,var(--brand)_40%,transparent)]"
       style={{ "--brand": item.brandColor } as React.CSSProperties}
     >
       <div
