@@ -204,9 +204,9 @@ export const translations = {
     "dash.leads.hot": "Hot",
     "dash.leads.warm": "Warm",
     "dash.leads.cold": "Cold",
-    "dash.notif.1": "New lead from WhatsApp — María García",
+    "dash.notif.1": "New lead from WhatsApp — Manel López",
     "dash.notif.2": "Sales Bot resolved 3 conversations",
-    "dash.notif.3": "Lead scored: Carlos López — 78 pts",
+    "dash.notif.3": "Lead scored: Mario Yañez — 78 pts",
     "dash.notif.4": "Chat escalated to human agent",
 
     // Service Visuals
@@ -419,9 +419,9 @@ export const translations = {
     "dash.leads.hot": "Caliente",
     "dash.leads.warm": "Tibio",
     "dash.leads.cold": "Frío",
-    "dash.notif.1": "Nuevo lead desde WhatsApp — María García",
+    "dash.notif.1": "Nuevo lead desde WhatsApp — Manel López",
     "dash.notif.2": "Bot de Ventas resolvió 3 conversaciones",
-    "dash.notif.3": "Lead puntuado: Carlos López — 78 pts",
+    "dash.notif.3": "Lead puntuado: Mario Yañez — 78 pts",
     "dash.notif.4": "Chat escalado a agente humano",
 
     // Service Visuals

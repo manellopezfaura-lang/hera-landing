@@ -370,10 +370,10 @@ function ConversationsPanel() {
 /* ─── Panel: Leads ─── */
 
 const leads = [
-  { name: "María García", company: "Fintech Co", score: 92, statusKey: "dash.leads.hot" as TranslationKey, color: "text-red-500 bg-red-50" },
-  { name: "Carlos López", company: "SaaS Inc", score: 78, statusKey: "dash.leads.warm" as TranslationKey, color: "text-amber-600 bg-amber-50" },
-  { name: "Ana Ruiz", company: "E-commerce", score: 85, statusKey: "dash.leads.hot" as TranslationKey, color: "text-red-500 bg-red-50" },
-  { name: "David Chen", company: "Agency", score: 45, statusKey: "dash.leads.cold" as TranslationKey, color: "text-blue-500 bg-blue-50" },
+  { name: "Manel López", company: "Fintech Co", score: 92, statusKey: "dash.leads.hot" as TranslationKey, color: "text-red-500 bg-red-50" },
+  { name: "Mario Yañez", company: "SaaS Inc", score: 78, statusKey: "dash.leads.warm" as TranslationKey, color: "text-amber-600 bg-amber-50" },
+  { name: "Paula Abarca", company: "E-commerce", score: 85, statusKey: "dash.leads.hot" as TranslationKey, color: "text-red-500 bg-red-50" },
+  { name: "Bernat Garriga", company: "Agency", score: 45, statusKey: "dash.leads.cold" as TranslationKey, color: "text-blue-500 bg-blue-50" },
 ]
 
 function LeadsPanel() {
