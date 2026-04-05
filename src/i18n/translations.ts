@@ -8,7 +8,7 @@ export const translations = {
     "nav.cta": "Contact us",
 
     // Hero
-    "hero.badge": "Compatible with every AI model",
+    "hero.badge": "AI agents that work 24/7",
     "hero.headline": "The Future of",
     "hero.headlineAccent": "Smarter",
     "hero.headline2": "Automation",
@@ -223,7 +223,7 @@ export const translations = {
     "nav.cta": "Contactar",
 
     // Hero
-    "hero.badge": "Compatible con todos los modelos de IA",
+    "hero.badge": "Agentes IA que trabajan 24/7",
     "hero.headline": "El Futuro de la",
     "hero.headlineAccent": "Automatización",
     "hero.headline2": "Inteligente",
