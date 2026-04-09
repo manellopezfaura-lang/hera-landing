@@ -12,7 +12,8 @@ import { FAQSection } from "./FAQSection"
 import { CTASection } from "./CTASection"
 import { Footer } from "./Footer"
 import { ScrollToTop } from "./ScrollToTop"
-import { HeraChatWidget } from "./HeraChatWidget"
+import { HeraChatWidget } from "@107studio/hera"
+import "@107studio/hera/styles"
 
 export function SaasLanding() {
   return (
@@ -37,7 +38,13 @@ export function SaasLanding() {
       <CTASection />
       <Footer />
       <ScrollToTop />
-      <HeraChatWidget />
+      <HeraChatWidget
+        apiUrl="https://www.107studio.es/api/chat/hera"
+        showThemeToggle
+        showNudge
+        nudgeText="Prueba Hera en vivo"
+        theme="light"
+      />
     </div>
     </LanguageProvider>
   )

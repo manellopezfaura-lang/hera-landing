@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@107studio/hera':
+        specifier: github:manellopezfaura-lang/hera
+        version: git+https://github.com/manellopezfaura-lang/hera.git#ddeb5d7100ff1364c21bc9ee3128e109a9937140(@ai-sdk/react@3.0.148(react@19.2.4)(zod@4.3.6))(ai@6.0.146(zod@4.3.6))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@ai-sdk/react':
         specifier: ^3.0.148
         version: 3.0.148(react@19.2.4)(zod@4.3.6)
@@ -56,6 +59,15 @@ importers:
         version: 8.0.3(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@25.5.2)(jiti@2.6.1)
 
 packages:
+
+  '@107studio/hera@git+https://github.com/manellopezfaura-lang/hera.git#ddeb5d7100ff1364c21bc9ee3128e109a9937140':
+    resolution: {commit: ddeb5d7100ff1364c21bc9ee3128e109a9937140, repo: https://github.com/manellopezfaura-lang/hera.git, type: git}
+    version: 1.0.0
+    peerDependencies:
+      '@ai-sdk/react': '>=1.0.0'
+      ai: '>=4.0.0'
+      react: '>=18'
+      react-dom: '>=18'
 
   '@ai-sdk/gateway@3.0.88':
     resolution: {integrity: sha512-AFoj7xdWAtCQcy0jJ235ENSakYM8D28qBX+rB+/rX4r8qe/LXgl0e5UivOqxAlIM5E9jnQdYxIPuj3XFtGk/yg==}
@@ -622,6 +634,13 @@ packages:
     resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
+
+  '@107studio/hera@git+https://github.com/manellopezfaura-lang/hera.git#ddeb5d7100ff1364c21bc9ee3128e109a9937140(@ai-sdk/react@3.0.148(react@19.2.4)(zod@4.3.6))(ai@6.0.146(zod@4.3.6))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@ai-sdk/react': 3.0.148(react@19.2.4)(zod@4.3.6)
+      ai: 6.0.146(zod@4.3.6)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@ai-sdk/gateway@3.0.88(zod@4.3.6)':
     dependencies:

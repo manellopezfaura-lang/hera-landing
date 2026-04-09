@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/hera", "destination": "/index.html" },
+    { "source": "/hera/assets/:path*", "destination": "/assets/:path*" },
+    { "source": "/hera/favicon.svg", "destination": "/favicon.svg" },
+    { "source": "/hera/og.png", "destination": "/og.png" },
+    { "source": "/hera/:path*", "destination": "/index.html" }
+  ]
+}

@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@107studio/hera": "github:manellopezfaura-lang/hera",
     "@ai-sdk/react": "^3.0.148",
     "ai": "^6.0.146",
     "framer-motion": "^12.38.0",
