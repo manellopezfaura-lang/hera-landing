@@ -12,7 +12,20 @@ export const translations = {
     "hero.headline": "The Future of",
     "hero.headlineAccent": "Smarter",
     "hero.headline2": "Automation",
-    "hero.sub": "Automate your busywork with intelligent agents that learn, adapt, and execute—so your team can focus on what matters most.",
+    "hero.sub": "AI agents for businesses and SMEs that answer customers, book appointments, and capture leads 24/7 — without lifting a finger.",
+
+    // Benefits
+    "benefits.badge": "For your business",
+    "benefits.headline": "What Hera can do",
+    "benefits.headlineAccent": "for your company",
+    "benefits.sub": "Fewer tasks, more customers. Here's what an AI agent does for you from day one.",
+    "benefits.cta": "Get your free diagnosis",
+    "benefits.1.title": "24/7 customer service that sells",
+    "benefits.1.desc": "An AI virtual assistant that answers, resolves questions, and qualifies leads around the clock — no waits, no lost customers.",
+    "benefits.2.title": "Books appointments automatically, error-free",
+    "benefits.2.desc": "A 24/7 AI receptionist that books, confirms, and reminds appointments via WhatsApp or web. A full calendar without phone calls.",
+    "benefits.3.title": "Automate processes and win more clients",
+    "benefits.3.desc": "AI agents for businesses and SMEs that automate repetitive tasks, follow up, and never let an opportunity slip away.",
 
     // Services
     "services.badge": "What we build",
@@ -102,6 +115,9 @@ export const translations = {
     "contact.message": "How can we help?",
     "contact.messagePlaceholder": "Tell us about your needs...",
     "contact.submit": "Send message",
+    "contact.sending": "Sending…",
+    "contact.success": "Message sent — we'll get back to you soon.",
+    "contact.error": "Couldn't send. Please try again in a moment.",
 
     // Footer
     "footer.tagline": "Intelligent automation for teams that move fast.",
@@ -227,7 +243,20 @@ export const translations = {
     "hero.headline": "El Futuro de la",
     "hero.headlineAccent": "Automatización",
     "hero.headline2": "Inteligente",
-    "hero.sub": "Automatiza el trabajo repetitivo con agentes inteligentes que aprenden, se adaptan y ejecutan — para que tu equipo se enfoque en lo que importa.",
+    "hero.sub": "Agentes IA para empresas y pymes que atienden a tus clientes, agendan citas y captan leads 24/7 — sin que tú levantes un dedo.",
+
+    // Benefits
+    "benefits.badge": "Para tu negocio",
+    "benefits.headline": "Qué puede hacer Hera",
+    "benefits.headlineAccent": "por tu empresa",
+    "benefits.sub": "Menos tareas, más clientes. Esto es lo que un agente de IA hace por ti desde el primer día.",
+    "benefits.cta": "Solicita tu diagnóstico gratuito",
+    "benefits.1.title": "Atención al cliente 24/7 que vende",
+    "benefits.1.desc": "Un asistente virtual con IA que responde, resuelve dudas y cualifica leads a cualquier hora — sin esperas ni clientes perdidos.",
+    "benefits.2.title": "Agenda citas en automático, sin errores",
+    "benefits.2.desc": "Una recepcionista IA 24/7 que reserva, confirma y recuerda citas por WhatsApp o web. Tu agenda llena sin llamadas.",
+    "benefits.3.title": "Automatiza procesos y capta más clientes",
+    "benefits.3.desc": "Agentes IA para empresas y pymes que automatizan tareas repetitivas, hacen seguimiento y no dejan escapar ninguna oportunidad.",
 
     // Services
     "services.badge": "Qué hacemos",
@@ -317,6 +346,9 @@ export const translations = {
     "contact.message": "¿Cómo podemos ayudarte?",
     "contact.messagePlaceholder": "Cuéntanos tus necesidades...",
     "contact.submit": "Enviar mensaje",
+    "contact.sending": "Enviando…",
+    "contact.success": "Mensaje enviado — te responderemos pronto.",
+    "contact.error": "No se pudo enviar. Inténtalo de nuevo en un momento.",
 
     // Footer
     "footer.tagline": "Automatización inteligente para equipos que van rápido.",

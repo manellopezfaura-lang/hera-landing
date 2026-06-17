@@ -2,6 +2,7 @@ import { LanguageProvider } from "../../i18n/LanguageContext"
 import { SaasNavbar } from "./SaasNavbar"
 import { SaasHero } from "./SaasHero"
 import { TrustBar } from "./TrustBar"
+import { BenefitsSection } from "./BenefitsSection"
 import { ServicesSection } from "./ServicesSection"
 import { AnimatedShowcase } from "./animated-showcase"
 import { HowItWorksSection } from "./HowItWorksSection"
@@ -27,6 +28,7 @@ export function SaasLanding() {
       </div>
 
       {/* Below the fold */}
+      <BenefitsSection />
       <ServicesSection />
       <TrustBar />
       <HowItWorksSection />
