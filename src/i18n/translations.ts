@@ -8,11 +8,11 @@ export const translations = {
     "nav.cta": "Contact us",
 
     // Hero
-    "hero.badge": "AI agents that work 24/7",
-    "hero.headline": "The Future of",
-    "hero.headlineAccent": "Smarter",
-    "hero.headline2": "Automation",
-    "hero.sub": "AI agents for businesses and SMEs that answer customers, book appointments, and capture leads 24/7 — without lifting a finger.",
+    "hero.badge": "No code · live in 48 h",
+    "hero.headline": "AI agents that answer, book and",
+    "hero.headlineAccent": "sell",
+    "hero.headline2": "24/7",
+    "hero.sub": "An AI assistant for businesses and SMEs — on WhatsApp, web and social, with tailored setup and real support.",
 
     // Benefits
     "benefits.badge": "For your business",
@@ -239,11 +239,11 @@ export const translations = {
     "nav.cta": "Contactar",
 
     // Hero
-    "hero.badge": "Agentes IA que trabajan 24/7",
-    "hero.headline": "El Futuro de la",
-    "hero.headlineAccent": "Automatización",
-    "hero.headline2": "Inteligente",
-    "hero.sub": "Agentes IA para empresas y pymes que atienden a tus clientes, agendan citas y captan leads 24/7 — sin que tú levantes un dedo.",
+    "hero.badge": "Sin código · operativo en 48 h",
+    "hero.headline": "Agentes IA que atienden, agendan y",
+    "hero.headlineAccent": "venden",
+    "hero.headline2": "24/7",
+    "hero.sub": "Un asistente con IA para empresas y pymes — en WhatsApp, web y redes, con implementación a medida y soporte real.",
 
     // Benefits
     "benefits.badge": "Para tu negocio",
